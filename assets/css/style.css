@@ -426,10 +426,13 @@ h2 {
     padding: 30px;
     gap: 30px;
     transition: var(--transition);
+    border: 1px solid rgba(208, 0, 0, 0.1);
 }
 
 .event-card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(208, 0, 0, 0.15);
+    border-color: rgba(208, 0, 0, 0.3);
 }
 
 .event-date {
@@ -610,9 +613,10 @@ h2 {
    Footer
    ========================================================================== */
 .footer {
-    background-color: var(--dark-text);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--dark-text);
     padding: 40px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer p {
