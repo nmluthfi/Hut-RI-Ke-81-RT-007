@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="./assets/css/style.css?v=7">
+    <link rel="stylesheet" href="./assets/css/style.css?v=8">
     <!-- Confetti JS -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
@@ -58,6 +58,29 @@
                 <div class="hero-buttons">
                     <a href="#acara" class="btn btn-primary">Lihat Jadwal</a>
                     <a href="#pendaftaran" class="btn btn-secondary">Daftar Sekarang</a>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-wrapper reveal-text" style="--delay: 1.1s;">
+                    <p class="countdown-title">Acara Dimulai Dalam:</p>
+                    <div id="countdown" class="countdown-timer">
+                        <div class="time-box">
+                            <span id="days" class="time-value">00</span>
+                            <span class="time-label">Hari</span>
+                        </div>
+                        <div class="time-box">
+                            <span id="hours" class="time-value">00</span>
+                            <span class="time-label">Jam</span>
+                        </div>
+                        <div class="time-box">
+                            <span id="minutes" class="time-value">00</span>
+                            <span class="time-label">Menit</span>
+                        </div>
+                        <div class="time-box">
+                            <span id="seconds" class="time-value">00</span>
+                            <span class="time-label">Detik</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
@@ -141,6 +164,20 @@
                             <span class="badge badge-dark">Malam Puncak</span>
                         </div>
                         <p class="location">📍 Gg. Mawar 3</p>
+                        
+                        <!-- Google Maps Embed -->
+                        <div class="map-container" style="margin: 15px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.214152345!2d106.928958!3d-6.211267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b58d7d34bc3%3A0x25df20c51ebeb1db!2sGg.%20Mawar%203%2C%20RW.1%2C%20Penggilingan%2C%20Kec.%20Cakung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013940!5e0!3m2!1sid!2sid!4v1714567890123!5m2!1sid!2sid" 
+                                width="100%" 
+                                height="200" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+
                         <p class="tasyakuran-desc">
                             Malam doa bersama dan tasyakuran memperingati HUT RI ke-81 dengan tema "Indonesia Berdaulat, Adil, dan Makmur". Mari bersyukur atas nikmat kemerdekaan dan mempererat persaudaraan.
                         </p>
@@ -159,12 +196,12 @@
                 <p style="color:rgba(255,255,255,0.9) !important;">Daftarkan diri Anda sekarang dan jadilah bagian dari kemeriahan perayaan 17 Agustus bersama keluarga dan masyarakat.</p>
                 <div class="contacts-grid mt-6">
                     <a href="https://wa.me/628997786217" target="_blank" class="contact-btn glass-btn">
-                        <span>Ka Dhea</span>
+                        <span>Dhea</span>
                         <span class="wa-number">0899-7786-217</span>
                     </a>
-                    <a href="https://wa.me/6289534236237" target="_blank" class="contact-btn glass-btn">
+                    <a href="https://wa.me/62895342362375" target="_blank" class="contact-btn glass-btn">
                         <span>Kak Maul</span>
-                        <span class="wa-number">0895-3423-6237</span>
+                        <span class="wa-number">0895-3423-62375</span>
                     </a>
                     <a href="https://wa.me/6285715130255" target="_blank" class="contact-btn glass-btn">
                         <span>Kak Septi</span>

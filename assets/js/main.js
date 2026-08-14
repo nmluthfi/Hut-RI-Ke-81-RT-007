@@ -117,4 +117,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Countdown Timer Logic
+    const countDownDate = new Date("Aug 15, 2026 09:00:00").getTime();
+    
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        
+        if (distance < 0) {
+            document.getElementById("countdown").innerHTML = "<div class='time-box'><span class='time-value' style='font-size:1.2rem'>Acara Sedang Berlangsung!</span></div>";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (document.getElementById("days")) {
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        }
+    };
+
+    // Update immediately and then every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 });

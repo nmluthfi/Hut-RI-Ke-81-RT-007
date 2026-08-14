@@ -378,6 +378,54 @@ h2 {
 .hero-buttons {
     display: flex;
     gap: 15px;
+    margin-bottom: 40px;
+}
+
+/* Countdown Timer */
+.countdown-wrapper {
+    margin-top: 20px;
+}
+
+.countdown-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 15px;
+}
+
+.time-box {
+    background: var(--white);
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    min-width: 70px;
+    border: 1px solid rgba(208,0,0,0.1);
+}
+
+.time-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-red);
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.time-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .hero-image {
