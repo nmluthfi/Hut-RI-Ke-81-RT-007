@@ -778,6 +778,9 @@ h2 {
     .event-date .day { font-size: 2.2rem; margin: 0; }
     .event-date .month { font-size: 1rem; margin: 0; }
     .event-date .time { font-size: 0.85rem; width: 100%; margin-top: 5px; opacity: 0.9; }
+    .event-title { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .event-title h3 { font-size: 1.4rem; line-height: 1.3; }
+    .location { margin-bottom: 20px; font-size: 0.95rem; }
 }
 
 @media (max-width: 768px) {
