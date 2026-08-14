@@ -616,6 +616,8 @@ h2 {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 700;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .badge-dark {
