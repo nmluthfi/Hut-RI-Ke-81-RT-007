@@ -87,9 +87,34 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(40px)';
         el.style.transition = 'opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
-        // Stagger children within the same section loosely by assigning delays
-        // We'll reset delay logic per section, but a simple modulo works for now.
         el.dataset.delay = (index % 3) * 150; 
         observer.observe(el);
+    });
+
+    // Scroll Progress Bar
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = scrollPercentage + '%';
+        });
+    }
+
+    // Confetti Burst on CTA click
+    const ctaButtons = document.querySelectorAll('.btn-secondary, .contact-btn');
+    ctaButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Only confetti if canvas-confetti is loaded
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#D00000', '#ffffff', '#8B0000']
+                });
+            }
+        });
     });
 });
