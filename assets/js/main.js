@@ -68,21 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                // Add staggered delay based on a data attribute or index if available
+                const delay = entry.target.dataset.delay || 0;
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, delay);
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     // Add animation properties and observe cards
-    const animatedElements = document.querySelectorAll('.card, .event-card, .cta-box');
-    animatedElements.forEach(el => {
+    const animatedElements = document.querySelectorAll('.card, .event-card, .cta-box, .section-header');
+    animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        // Stagger children within the same section loosely by assigning delays
+        // We'll reset delay logic per section, but a simple modulo works for now.
+        el.dataset.delay = (index % 3) * 150; 
         observer.observe(el);
     });
 });
