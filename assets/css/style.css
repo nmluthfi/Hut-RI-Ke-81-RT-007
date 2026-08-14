@@ -265,6 +265,9 @@ h2 {
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     /* Animated Gradient Background */
     background: linear-gradient(-45deg, #f8f9fa, #ffffff, #ffe5e5, #ffffff);
     background-size: 400% 400%;
