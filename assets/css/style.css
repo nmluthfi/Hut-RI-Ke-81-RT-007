@@ -645,16 +645,18 @@ h2 {
     font-size: 1.1rem;
     margin-bottom: 10px;
     border-bottom: 2px solid var(--primary-red);
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: 5px;
 }
 
 .time-slot {
-    display: block;
+    display: inline-block;
     font-size: 0.85rem;
     color: var(--gray-text);
     font-weight: normal;
-    margin-top: 4px;
+    margin-top: 0;
     font-family: var(--font-body);
 }
 
