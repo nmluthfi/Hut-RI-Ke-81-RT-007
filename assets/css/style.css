@@ -622,14 +622,15 @@ h2 {
    Footer
    ========================================================================== */
 .footer {
-    background-color: var(--white);
-    color: var(--dark-text);
+    background-color: #ffffff !important;
+    color: #212529 !important;
     padding: 40px 0;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 3px solid var(--primary-red);
 }
 
 .footer p {
-    opacity: 0.8;
+    color: #212529 !important;
+    opacity: 1 !important;
 }
 
 .footer-tagline {
