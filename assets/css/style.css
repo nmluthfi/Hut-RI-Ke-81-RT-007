@@ -523,6 +523,15 @@ h2 {
     padding-bottom: 5px;
 }
 
+.time-slot {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    font-weight: normal;
+    margin-top: 4px;
+    font-family: var(--font-body);
+}
+
 .category ul {
     list-style-type: none;
 }
