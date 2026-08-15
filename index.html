@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="./assets/css/style.css?v=15">
+    <link rel="stylesheet" href="./assets/css/style.css?v=16">
     <!-- Confetti JS -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
@@ -207,9 +207,24 @@
             </div>
             <div class="masonry-grid">
                 <div class="masonry-item video-item">
-                    <div class="video-placeholder">
-                        <span class="icon">🎥</span>
-                        <p>Video sedang diproses...</p>
+                    <video controls preload="metadata" style="width: 100%; display: block; border-radius: 16px 16px 0 0;">
+                        <source src="./assets/videos/daftar_lomba.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                    </video>
+                    <div class="video-caption" style="padding: 15px;">
+                        <h4 style="margin: 0; font-size: 1.1rem; color: var(--dark-red);">Keseruan Lomba</h4>
+                        <p style="margin: 5px 0 0; font-size: 0.9rem; color: var(--gray-text);">Persiapan dan antusiasme warga mengikuti lomba 17-an.</p>
+                    </div>
+                </div>
+                
+                <div class="masonry-item video-item">
+                    <video controls preload="metadata" style="width: 100%; display: block; border-radius: 16px 16px 0 0;">
+                        <source src="./assets/videos/pak_rt_asik.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                    </video>
+                    <div class="video-caption" style="padding: 15px;">
+                        <h4 style="margin: 0; font-size: 1.1rem; color: var(--dark-red);">Sambutan Pak RT</h4>
+                        <p style="margin: 5px 0 0; font-size: 0.9rem; color: var(--gray-text);">Semangat membara dari Pak RT untuk warga tercinta.</p>
                     </div>
                 </div>
             </div>
